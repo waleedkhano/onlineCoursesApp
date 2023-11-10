@@ -8,7 +8,9 @@ const Course = (props) => {
   const dispatch = useDispatch();
 
   const addToPlayList = (courseId) => {
-    dispatch(addToPlaylist(courseId))
+    // dispatch(addToPlaylist(courseId))
+    toast.error("Please login to your account")
+
   }
 
 
