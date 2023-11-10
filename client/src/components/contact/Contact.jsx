@@ -15,10 +15,11 @@ const Contact = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(contactUs(name, email, message))
+        // dispatch(contactUs(name, email, message))
         setName('')
         setEmail('')
         setMessage('')
+        toast.error("Please Login to user account")
     }
 
     useEffect(()=>{

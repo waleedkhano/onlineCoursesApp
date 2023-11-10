@@ -14,10 +14,11 @@ const Request = () => {
     const { error, message} = useSelector(state=> state.contact)
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(courseRequest(name, email, course))
+        // dispatch(courseRequest(name, email, course))
         setName('')
         setEmail('')
         setCourse('')
+        toast.error("Please login to your account")
     }
 
     useEffect(()=>{

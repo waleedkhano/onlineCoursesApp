@@ -14,7 +14,8 @@ const Login = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(login(email, password))
+        // dispatch(login(email, password))
+        toast.error("Sorry this is a demo site")
     }
 
     return(

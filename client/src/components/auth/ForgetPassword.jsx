@@ -12,7 +12,8 @@ const ForgetPassword = () => {
     const dispatch = useDispatch();
     const submitHandler = (e) =>{
         e.preventDefault();
-        dispatch(forgetPassword(email))
+        // dispatch(forgetPassword(email))
+        toast.error("Sorry this is a demo site")
     }
 
     useEffect(() => {

@@ -18,17 +18,46 @@ const Courses = () => {
         'Mobile App Dev',
     ];
 
-    const {courses, error} = useSelector(state=>state.course)
+    // const {courses, error} = useSelector(state=>state.course)
 
-    useEffect(()=>{
-        dispatch(allCourses(category, keyword))
+    // useEffect(()=>{
+    //     dispatch(allCourses(category, keyword))
 
-        if(error){
-            toast.error(error)
-            dispatch({type: 'clearError'})
-        }
+    //     if(error){
+    //         toast.error(error)
+    //         dispatch({type: 'clearError'})
+    //     }
 
-    }, [category, keyword, dispatch, error]);
+    // }, [category, keyword, dispatch, error]);
+
+    const courses= [
+        {
+            _id: "edjdjewnfwe312",
+            title: "Machine Learning",
+            description: "Learn Machine learning in this course",
+            poster:{
+                url: 'https://res.cloudinary.com/dk4xv6wps/image/upload/v1699544564/msdyraedssal8kwn9t52.jpg'
+            },
+            views: 1,
+            numOfVideos: 0,
+            category: "Machine Learning",
+            createdBy: 'waleed',
+            lectures:[]
+        },
+        {
+            _id: "edjdjiuas3nfwe312",
+            title: "Full Stack",
+            description: "Complete full stack mobile application course for beginners",
+            poster:{
+                url: 'https://res.cloudinary.com/dk4xv6wps/image/upload/v1699544412/kwcqsok1nermqdwvmmsm.jpg'
+            },
+            views: 1,
+            numOfVideos: 0,
+            category: "Machine Learning",
+            createdBy: 'waleed',
+            lectures:[]
+        },
+     ]
 
     return (<>
         <div className="coursesContainer">

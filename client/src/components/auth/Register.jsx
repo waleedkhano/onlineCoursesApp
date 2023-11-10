@@ -4,6 +4,8 @@ import './login.css';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { registerForm } from '../../redux/actions/user';
+import { toast } from 'react-hot-toast';
+
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -15,27 +17,29 @@ const Register = () => {
   const dispatch = useDispatch();
 
   const handleAvatarChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setAvatarPreview(reader.result);
-        setAvatar(file)
-      };
-      reader.readAsDataURL(file);
-    }
+    // const file = e.target.files[0];
+    // if (file) {
+    //   const reader = new FileReader();
+    //   reader.onload = () => {
+    //     setAvatarPreview(reader.result);
+    //     setAvatar(file)
+    //   };
+    //   reader.readAsDataURL(file);
+    // }
   };
 
   const formHandler = (e) =>{
     e.preventDefault();
-    const myForm = new FormData();
+    // const myForm = new FormData();
 
-    myForm.append("name", name)
-    myForm.append("email", email)
-    myForm.append("password", password)
-    myForm.append("file", avatar)
+    // myForm.append("name", name)
+    // myForm.append("email", email)
+    // myForm.append("password", password)
+    // myForm.append("file", avatar)
 
-    dispatch(registerForm(myForm))
+    // dispatch(registerForm(myForm))
+    toast.error("Sorry this is a demo site")
+
 
   }
 
